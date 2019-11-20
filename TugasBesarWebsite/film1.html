@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <title>Korean TV Shows Online | KShow123</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" title="Korean Show - RSS" href="https://feeds.feedburner.com/kshowse">
+    <link rel="shortcut icon" type="image/ico" href="http://kshow123.net/favicon.ico">
+    <link href="http://kshow123.net/theme/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("images/kamera.jpg");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .dropdown .dropbtn {
+            border: none;
+            outline: none;
+            color: black;
+            background-color: white;
+            padding: 14px 20px;
+            font-family: inherit;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            display:block;
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: justify;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            color:black;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;   
+        }
+    </style>
+
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="halamanUtama.html" class="w3-bar-item w3-button w3-wide"><img src = "images/logo.png" style="width : 100px; height: 22px;"></a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small" id="myTopNav">
+                    <a href="#watch" class="w3-bar-item w3-button">WATCH</a>
+                    <a href="#latest" class="w3-bar-item w3-button">LATEST</a>
+                    <a href="#popular" class="w3-bar-item w3-button">POPULAR</a>
+                    <a href="#rated" class="w3-bar-item w3-button">RATED</a>
+                    <a href="#categories" class="w3-bar-item w3-button">CATEGORIES</a>
+                    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+                    <div class="search-container" style = "float: right; margin-top: 8px; padding: 3px;">
+                        <form action="/action_page.php">
+                            <input type="text" placeholder=" Search.." name="search">
+                            <button type="submit"><i class="fa fa-search" style = "color: black;"></i></button>
+                        </form>
+                    </div> 
+                </div>
+                
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- See More Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="seemore">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="http://kshow123.net/show/knowing-brother-i0/">Knowing Brother</a></h5>
+                <hr>
+                <div style="float: right">
+                    <a href="#listepisode">
+                        <small class="pull-right">LIST EPISODE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <div id="info">
+                    <div class="media">
+                        <a class="pull-left hidden-xs" href="http://kshow123.net/show/knowing-brother-i0/">
+                            <img class="media-object" src=" http://icdn.kshow123.net/cover/knowing-brother.jpg" alt=" Knowing Brother Poster" width="320" height="180">
+                        </a>
+                        <div class="media-body">
+                            <a href="http://kshow123.net/show/knowing-brother-i0/">Knowing Brother</a>
+                        </div>
+                        <p class="media-info"><strong>As know as:</strong>  아는 형님 l Knowing Bros</p>
+                        <p class="media-info"><strong>Air time:</strong>  23h. <strong>Next Ep:</strong>  23h00, Sunday</p>
+                        <p class="media-info"><strong>Director:</strong> <a href="http://kshow123.net/search/updating.../" title="updating...">updating...</a></p>
+                        <p class="media-info"><strong>Cast:</strong> <a href="http://kshow123.net/search/Kang-Ho--dong/" title="Kang Ho-dong">Kang Ho-dong</a>, <a href="http://kshow123.net/search/Lee-Soo--geun/" title="Lee Soo-geun">Lee Soo-geun</a>, <a href="http://kshow123.net/search/Seo-Jang--hoon/" title="Seo Jang-hoon">Seo Jang-hoon</a>, <a href="http://kshow123.net/search/Kim-Young--chul/" title="Kim Young-chul">Kim Young-chul</a></p>
+                        <p class="media-info"><strong>Broadcast Network:</strong> <a href="http://kshow123.net/search/JTBC/" title="JTBC">JTBC</a></p>
+                        <p class="media-info"><strong>Released:</strong> 2016</p>
+                        <div class="w3-xlarge w3-section">
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-snapchat w3-hover-opacity"></i>
+                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                    <div class="desc" style="text-align: justify;">
+                            <p>The cast takes questions sent in from viewers and tries to answer them best to their abilities, through dialogue or through experimentation.<br>
+                                <br>
+                                Airing at the 5 pm KST time slot for most of its run, Running Man switched to the second part of Good Sunday (which happened May 22 and May 29, 2011 with Kim Yu-na's Kiss and Cry but was quickly switched back due to low ratings) beginning May 6, 2012, airing after Kim Byung-man's Law of the Jungle 2 at 6:10 pm and airing against KBS2 Happy Sunday's 1 Night 2 Days Season 2 and MBC Sunday Night's I Am a Singer 2.
+                            </p>
+                    </div>
+                    <div id="tags">Tags: 
+                        <a href="http://kshow123.net/tags/Knowing-Brother/" title="Knowing Brother">Knowing Brother</a> 
+                        <span id="tags-e">Watch Knowing Brother English Subtitles, Watch Knowing Brother Eng sub, Knowing Brother engsub, download Knowing Brother, Knowing Brother kshowonline, Knowing Brother kshownow, Knowing Brother viki, Knowing Brother youtube, Knowing Brother show, watch online free Knowing Brother, Knowing Brother newasiantv, kissasian, dramacool, dramanice, myasiantv</span>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- List Episode Section -->
+            <div class="w3-container" style="padding:128px 16px; background-color:rgb(255, 255, 219);" id="listepisode">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="http://kshow123.net/show/knowing-brother-i0/">Knowing Brother</a> > </a><a href="#listepisode">LIST EPISODE</a></h5>
+                <div style="float: right">
+                    <a href="#categories">
+                        <small class="pull-right">SEE MORE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <table class="table" style="border-color: white;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 205" href="#watchfilm">Knowing Brother Episode 205</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 194</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 520</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 204" href="http://kshow123.net/show/knowing-brother/episode-204.html">Knowing Brother Episode 204</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 985</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 3.8k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> a week ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 203" href="http://kshow123.net/show/knowing-brother/episode-203.html">Knowing Brother Episode 203</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 356</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1.7k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 202" href="http://kshow123.net/show/knowing-brother/episode-202.html">Knowing Brother Episode 202</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 564</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1.4k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 201" href="http://kshow123.net/show/knowing-brother/episode-201.html">Knowing Brother Episode 201</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 698</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1.4k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 4 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 200" href="http://kshow123.net/show/knowing-brother/episode-200.html">Knowing Brother Episode 200</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 2.5k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 6.2k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> a month ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 199" href="http://kshow123.net/show/knowing-brother/episode-199.html">Knowing Brother Episode 199</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 503</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1.6k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> a month ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 198" href="http://kshow123.net/show/knowing-brother/episode-198.html">Knowing Brother Episode 198</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 406</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1.4k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 months ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 197" href="http://kshow123.net/show/knowing-brother/episode-197.html">Knowing Brother Episode 197</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 311</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 1k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 months ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Knowing Brother Episode 196" href="http://kshow123.net/show/knowing-brother/episode-196.html">Knowing Brother Episode 196</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 641</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 2.1k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 months ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <!-- WatchFilm Section -->
+            <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="watchfilm">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="#seemore">Knowing Brother</a> > Episode 205 </h5>
+                <hr>
+                <p><i>The following <strong>Knowing Brother Episode 205 Eng Sub</strong> has been released. <strong>Kshow123</strong> will always be the first to have the episode so please <b>Bookmark</b> us for update.</i></p>
+                <div style="float: right">
+                    <a href="#listepisode">
+                        <small class="pull-right">LIST EPISODE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <p><i>Watch other episodes of Knowing Brother Series at Kshow123.</i></p>
+                
+                <video width="1250" controls>
+                    <source src="images/rm473.webm" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="share">
+                    <div class="btn-group">
+                        <button type="button" id="btn-pre" data-target="http://kshow123.net/show/knowing-brother/episode-204.html" class="btn btn-default btn-sm"><span class="fa fa-chevron-left" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false"> Episode 205 <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" id="list_episode2"><li><a title="Episode 205" href="http://kshow123.net/show/knowing-brother/episode-205.html">Episode 205</a></li><li><a title="Episode 204" href="http://kshow123.net/show/knowing-brother/episode-204.html">Episode 204</a></li><li><a title="Episode 203" href="http://kshow123.net/show/knowing-brother/episode-203.html">Episode 203</a></li><li><a title="Episode 202" href="http://kshow123.net/show/knowing-brother/episode-202.html">Episode 202</a></li><li><a title="Episode 201" href="http://kshow123.net/show/knowing-brother/episode-201.html">Episode 201</a></li><li class="divider" role="presentation"></li><li class="paging"><a href="http://kshow123.net/show/knowing-brother/">See more...</a></li></ul>
+                    </div>
+                    <button id="download-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-download" aria-hidden="true"></span></button>
+                    <button id="like-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-thumbs-o-up" aria-hidden="true"> 194</span></button>
+                    <button id="star-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-star" aria-hidden="true"></span> 520</button>
+                </div>
+                <br>
+                <div id="info">
+                    <div class="media">
+                        <a class="pull-left hidden-xs" href="http://kshow123.net/show/knowing-brother-i0/">
+                            <img class="media-object" src=" http://icdn.kshow123.net/cover/knowing-brother.jpg" alt=" Knowing Brother Poster" width="320" height="180">
+                        </a>
+                        <div class="media-body">
+                            <a href="http://kshow123.net/show/knowing-brother-i0/">Knowing Brother</a>
+                        </div>
+                        <p class="media-info"><strong>As know as:</strong>  아는 형님 l Knowing Bros</p>
+                        <p class="media-info"><strong>Air time:</strong>  23h. <strong>Next Ep:</strong>  23h00, Sunday</p>
+                        <p class="media-info"><strong>Director:</strong> <a href="http://kshow123.net/search/updating.../" title="updating...">updating...</a></p>
+                        <p class="media-info"><strong>Cast:</strong> <a href="http://kshow123.net/search/Kang-Ho--dong/" title="Kang Ho-dong">Kang Ho-dong</a>, <a href="http://kshow123.net/search/Lee-Soo--geun/" title="Lee Soo-geun">Lee Soo-geun</a>, <a href="http://kshow123.net/search/Seo-Jang--hoon/" title="Seo Jang-hoon">Seo Jang-hoon</a>, <a href="http://kshow123.net/search/Kim-Young--chul/" title="Kim Young-chul">Kim Young-chul</a></p>
+                        <p class="media-info"><strong>Broadcast Network:</strong> <a href="http://kshow123.net/search/JTBC/" title="JTBC">JTBC</a></p>
+
+                        <div class="w3-xlarge w3-section">
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-snapchat w3-hover-opacity"></i>
+                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    </body>
+</html>

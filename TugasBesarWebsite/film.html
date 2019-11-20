@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <title>Korean TV Shows Online | KShow123</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" title="Korean Show - RSS" href="https://feeds.feedburner.com/kshowse">
+    <link rel="shortcut icon" type="image/ico" href="http://kshow123.net/favicon.ico">
+    <link href="http://kshow123.net/theme/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("images/kamera.jpg");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .dropdown .dropbtn {
+            border: none;
+            outline: none;
+            color: black;
+            background-color: white;
+            padding: 14px 20px;
+            font-family: inherit;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            display:block;
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: justify;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            color:black;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;   
+        }
+    </style>
+
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="halamanUtama.html" class="w3-bar-item w3-button w3-wide"><img src = "images/logo.png" style="width : 100px; height: 22px;"></a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small" id="myTopNav">
+                    <a href="#watch" class="w3-bar-item w3-button">WATCH</a>
+                    <a href="#latest" class="w3-bar-item w3-button">LATEST</a>
+                    <a href="#popular" class="w3-bar-item w3-button">POPULAR</a>
+                    <a href="#rated" class="w3-bar-item w3-button">RATED</a>
+                    <a href="#categories" class="w3-bar-item w3-button">CATEGORIES</a>
+                    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+                    <div class="search-container" style = "float: right; margin-top: 8px; padding: 3px;">
+                        <form action="/action_page.php">
+                            <input type="text" placeholder=" Search.." name="search">
+                            <button type="submit"><i class="fa fa-search" style = "color: black;"></i></button>
+                        </form>
+                    </div> 
+                </div>
+                
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- See More Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="seemore">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="http://kshow123.net/show/running-man/">RUNNING MAN</a></h5>
+                <hr>
+                <div style="float: right">
+                    <a href="#listepisode">
+                        <small class="pull-right">LIST EPISODE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <div id="info">
+                    <div class="media">
+                        <a class="pull-left hidden-xs" href="http://kshow123.net/show/running-man/">
+                            <img class="media-object" src=" http://icdn.kshow123.net/cover/running-man.jpg" alt=" Running Man Poster" width="350" height="250">
+                        </a>
+                        <div class="media-body">
+                            <h2 class="media-heading"><a href="http://kshow123.net/show/running-man/">Running man</a></h2>
+                        </div>
+                        <p class="media-info"><strong>As know as:</strong> Running Man</p>
+                        <p class="media-info"><strong>Air time:</strong> 17h. <strong>Next Ep:</strong> 17h00, Sunday</p>
+                        <p class="media-info"><strong>Director:</strong> <a href="http://kshow123.net/search/Jo-Hyo--jin/" title="Jo Hyo-jin">Jo Hyo-jin</a>, <a href="http://kshow123.net/search/Im-Hyung--taek/" title="Im Hyung-taek">Im Hyung-taek</a>, <a href="http://kshow123.net/search/Kim-Ju--hyung/" title="Kim Ju-hyung">Kim Ju-hyung</a></p>
+                        <p class="media-info"><strong>Cast:</strong> <a href="http://kshow123.net/search/Yu-Jae--suk/" title="Yu Jae-suk">Yu Jae-suk</a>, <a href="http://kshow123.net/search/Gary/" title="Gary">Gary</a>, <a href="http://kshow123.net/search/Ha--ha/" title="Ha-ha">Ha-ha</a>, <a href="http://kshow123.net/search/Ji-Suk--jin/" title="Ji Suk-jin">Ji Suk-jin</a>, <a href="http://kshow123.net/search/Kim-Jong--kook/" title="Kim Jong-kook">Kim Jong-kook</a>, <a href="http://kshow123.net/search/Lee-Kwang--su/" title="Lee Kwang-su">Lee Kwang-su</a>, <a href="http://kshow123.net/search/.../" title="...">...</a></p>
+                        <p class="media-info"><strong>Broadcast Network:</strong> <a href="http://kshow123.net/search/SBS/" title="SBS">SBS</a></p>
+                        <p class="media-info"><strong>Released:</strong> 2010</p>
+                        <div class="w3-xlarge w3-section">
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-snapchat w3-hover-opacity"></i>
+                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                    <div class="desc" style="text-align: justify;">
+                            <p>Running Man is a South Korean variety show; a part of SBS's Good Sunday lineup, along with Roommate. It was first aired on July 11, 2010. This show was classified as an "urban action variety"; a never-before-seen new genre of variety shows focused in an urban environment. The MCs and guests complete missions in a landmark to win the race. The show has since shifted to a more familiar reality-variety show concept focused on games. It has garnered attention as being the come-back program for Yoo Jae-suk, the main MC of the program, after leaving Good Sunday's Family Outing in February 2010.<br>
+                                <br>
+                                Airing at the 5 pm KST time slot for most of its run, Running Man switched to the second part of Good Sunday (which happened May 22 and May 29, 2011 with Kim Yu-na's Kiss and Cry but was quickly switched back due to low ratings) beginning May 6, 2012, airing after Kim Byung-man's Law of the Jungle 2 at 6:10 pm and airing against KBS2 Happy Sunday's 1 Night 2 Days Season 2 and MBC Sunday Night's I Am a Singer 2.
+                            </p>
+                    </div>
+                    <div id="tags">Tags: 
+                        <a href="http://kshow123.net/tags/Running-Man/" title="Running Man">Running Man</a> <span id="tags-e">Watch Running Man English Subtitles, Watch Running Man Eng sub, Running Man engsub, download Running Man, Running Man kshowonline, Running Man kshownow, Running Man viki, Running Man youtube, Running Man show, watch online free Running Man, Running Man newasiantv, kissasian, dramacool, dramanice, myasiantv</span>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- List Episode Section -->
+            <div class="w3-container" style="padding:128px 16px; background-color:rgb(255, 255, 219);" id="listepisode">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="http://kshow123.net/show/running-man/">RUNNING MAN</a> > </a><a href="#listepisode">LIST EPISODE</a></h5>
+                <div style="float: right">
+                    <a href="#categories">
+                        <small class="pull-right">SEE MORE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <table class="table" style="border-color: white;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default">RAW</span>
+                                    <a title="Running Man Episode 474" href="#watchfilm">Running Man Episode 474</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 399</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 115</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 9 hrs ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 473" href="http://kshow123.net/show/running-man/episode-473.html">Running Man Episode 473</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.6k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.5k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 7 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 472" href="http://kshow123.net/show/running-man/episode-472.html">Running Man Episode 472</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.8k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.5k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 471" href="http://kshow123.net/show/running-man/episode-471.html">Running Man Episode 471</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 984</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 470" href="http://kshow123.net/show/running-man/episode-470-i0.html">Running Man Episode 470</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.3k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 4 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 469" href="http://kshow123.net/show/running-man/episode-469.html">Running Man Episode 469</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 3k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.7k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> a month ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 468" href="http://kshow123.net/show/running-man/episode-468-i0.html">Running Man Episode 468</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 2.5k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.7k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> a month ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 467" href="http://kshow123.net/show/running-man/episode-467-i0.html">Running Man Episode 467</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.7k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.5k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 moths ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 466" href="http://kshow123.net/show/running-man/episode-466-i0.html">Running Man Episode 466</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.2k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 6.3k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 months ago</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                    <a title="Running Man Episode 465" href="http://kshow123.net/show/running-man/episode-465-i0.html">Running Man Episode 465</a>
+                                </p>
+                            </td>
+                            <td><span class="fa fa-star" aria-hidden="true"></span> 1.3k</td>
+                            <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5.1k</td>
+                            <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                            <td> 2 months ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <!-- WatchFilm Section -->
+            <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="watchfilm">
+                <h5 class="w3-Left"><a href="#home">HOME</a> > <a href="#watch">WATCH</a> > <a href="#seemore">RUNNING MAN</a> > Episode 474 </h5>
+                <hr>
+                <p><i>The following <strong>Running Man Episode 474 Eng Sub</strong> has been released. <strong>Kshow123</strong> will always be the first to have the episode so please <b>Bookmark</b> us for update.</i></p>
+                <div style="float: right">
+                    <a href="#listepisode">
+                        <small class="pull-right">LIST EPISODE 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+                </div>
+                <p><i>Watch other episodes of Running Man Series at Kshow123.</i></p>
+                
+                <video width="1250" controls>
+                    <source src="images/rm473.webm" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="share">
+                    <div class="btn-group">
+                        <button type="button" id="btn-pre" data-target="http://kshow123.net/show/running-man/episode-473.html" class="btn btn-default btn-sm"><span class="fa fa-chevron-left" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false"> Episode 474 <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" id="list_episode2"><li><a title="Episode 474" href="http://kshow123.net/show/running-man/episode-474.html">Episode 474</a></li><li><a title="Episode 473" href="http://kshow123.net/show/running-man/episode-473.html">Episode 473</a></li><li><a title="Episode 472" href="http://kshow123.net/show/running-man/episode-472.html">Episode 472</a></li><li><a title="Episode 471" href="http://kshow123.net/show/running-man/episode-471.html">Episode 471</a></li><li><a title="Episode 470" href="http://kshow123.net/show/running-man/episode-470-i0.html">Episode 470</a></li><li class="divider" role="presentation"></li><li class="paging"><a href="http://kshow123.net/show/running-man/">See more...</a></li></ul>
+                    </div>
+                    <button id="download-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-download" aria-hidden="true"></span></button>
+                    <button id="like-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-thumbs-o-up" aria-hidden="true"> 5.5k</span></button>
+                    <button id="star-btn" type="button" class="btn btn-default pull-right btn-sm hidden-xs"><span class="fa fa-star" aria-hidden="true"></span> 2k</button>
+                </div>
+                <br>
+                <div id="info">
+                    <div class="media">
+                        <a class="pull-left hidden-xs" href="http://kshow123.net/show/running-man/">
+                            <img class="media-object" src=" http://icdn.kshow123.net/cover/running-man.jpg" alt=" Running Man Poster" width="350" height="250">
+                        </a>
+                        <div class="media-body">
+                            <h2 class="media-heading"><a href="http://kshow123.net/show/running-man/">Running man</a></h2>
+                        </div>
+                        <p class="media-info"><strong>As know as:</strong> Running Man</p>
+                        <p class="media-info"><strong>Air time:</strong> 17h. <strong>Next Ep:</strong> 17h00, Sunday</p>
+                        <p class="media-info"><strong>Director:</strong> <a href="http://kshow123.net/search/Jo-Hyo--jin/" title="Jo Hyo-jin">Jo Hyo-jin</a>, <a href="http://kshow123.net/search/Im-Hyung--taek/" title="Im Hyung-taek">Im Hyung-taek</a>, <a href="http://kshow123.net/search/Kim-Ju--hyung/" title="Kim Ju-hyung">Kim Ju-hyung</a></p>
+                        <p class="media-info"><strong>Cast:</strong> <a href="http://kshow123.net/search/Yu-Jae--suk/" title="Yu Jae-suk">Yu Jae-suk</a>, <a href="http://kshow123.net/search/Gary/" title="Gary">Gary</a>, <a href="http://kshow123.net/search/Ha--ha/" title="Ha-ha">Ha-ha</a>, <a href="http://kshow123.net/search/Ji-Suk--jin/" title="Ji Suk-jin">Ji Suk-jin</a>, <a href="http://kshow123.net/search/Kim-Jong--kook/" title="Kim Jong-kook">Kim Jong-kook</a>, <a href="http://kshow123.net/search/Lee-Kwang--su/" title="Lee Kwang-su">Lee Kwang-su</a>, <a href="http://kshow123.net/search/.../" title="...">...</a></p>
+                        <p class="media-info"><strong>Broadcast Network:</strong> <a href="http://kshow123.net/search/SBS/" title="SBS">SBS</a></p>
+                        <p class="media-info"><strong>Released:</strong> 2010</p>
+                        <div class="w3-xlarge w3-section">
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-snapchat w3-hover-opacity"></i>
+                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    </body>
+</html>

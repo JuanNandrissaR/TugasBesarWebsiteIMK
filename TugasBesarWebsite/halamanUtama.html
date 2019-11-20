@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+    <title>Korean TV Shows Online | KShow123</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" title="Korean Show - RSS" href="https://feeds.feedburner.com/kshowse">
+    <link rel="shortcut icon" type="image/ico" href="http://kshow123.net/favicon.ico">
+    <link href="http://kshow123.net/theme/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("images/kamera.jpg");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .dropdown .dropbtn {
+            border: none;
+            outline: none;
+            color: black;
+            background-color: white;
+            padding: 14px 20px;
+            font-family: inherit;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            display:block;
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: justify;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            color:black;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;   
+        }
+    </style>
+    
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="#home" class="w3-bar-item w3-button w3-wide"><img src = "images/logo.png" style="width : 100px; height: 22px;"></a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small" id="myTopNav">
+                    <a href="#watch" class="w3-bar-item w3-button">WATCH</a>
+                    <a href="#latest" class="w3-bar-item w3-button">LATEST</a>
+                    <a href="#popular" class="w3-bar-item w3-button">POPULAR</a>
+                    <a href="#rated" class="w3-bar-item w3-button">RATED</a>
+                    <a href="#categories" class="w3-bar-item w3-button">CATEGORIES</a>
+                    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+                    <div class="search-container" style = "float: right; margin-top: 8px; padding: 3px;">
+                        <form action="/action_page.php">
+                            <input type="text" placeholder=" Search.." name="search">
+                            <button type="submit"><i class="fa fa-search" style = "color: black;"></i></button>
+                        </form>
+                    </div> 
+                </div>
+                
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+            <a href="#watch" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+            <a href="#popular" onclick="w3_close()" class="w3-bar-item w3-button">LATEST</a>
+            <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">POPULAR</a>
+            <a href="#rated" onclick="w3_close()" class="w3-bar-item w3-button">RATED</a>
+            <a href="#categories" onclick="w3_close()" class="w3-bar-item w3-button">CATEGORIES</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+            <div class="search-container" style = "float: right; margin-top: 8px; padding: 3px;">
+                <form action="/action_page.php">
+                    <input type="text" placeholder=" Search.." name="search">
+                    <button type="submit"><i class="fa fa-search" style = "color: black;"></i></button>
+                </form>
+            </div>
+        </nav>
+        
+        <!-- Header with full-height image -->
+        <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+            <div class="w3-display-left w3-text-white" style="padding:48px">
+                <span class="w3-jumbo w3-hide-small">Start something </span><br>
+                <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+                <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+                <p><a href="#watch" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Find the shows and Enjoy!</a></p>
+            </div> 
+            <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+        </header>
+        
+        <!-- Watch Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="watch">
+            <h3 class="w3-center"><a href="#watch" class="w3-bar-item w3-button w3-wide fa fa-refresh"></a>RECENT UPDATES</h3>
+            <div style="float: right">
+                    <a href="#latest">
+                        <small class="pull-right">See more 
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        </small>
+                    </a>
+            </div>
+            <table class="table" style="border-color: white;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default">RAW</span>
+                                <a href="http://kshow123.net/show/the-return-of-superman/episode-309.html" title="The Return Of Superman"> The Return Of Superman Ep 309</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 15</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 17</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> an hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default">RAW</span>
+                                <a href="http://kshow123.net/show/master-in-the-house/episode-92.html" title="Master In The House"> Master In The House Ep 92</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 49</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 57</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 1 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/knowing-brother/episode-202.html" title="Knowing Brother"> Knowing Brother Ep 202</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 241</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 228</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 1 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default">RAW</span>
+                                <a href="http://kshow123.net/show/running-man/episode-474.html" title="Running Man"> Running Man Ep 474</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 399</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 115</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 2 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/entertainment-weekly/episode-1782.html" title="Entertainment Weekly"> Entertainment Weekly Ep 1782</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 19</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 5</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 3 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/sketchbook-of-youheeyeul/episode-463.html" title="Sketchbook Of Youheeyeul"> Sketchbook Of Youheeyeul Ep 463</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 41</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 6</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 3 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/show-music-core/episode-653.html" title="Show! Music Core"> Show! Music Core Ep 653</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 3</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 2</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 3 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/men-in-black-box/episode-251.html" title="Men In Black Box"> Men In Black Box Ep 251</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 10</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 6</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 3 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/how-do-you-play/episode-14.html" title="How Do You Play?"> How Do You Play? Ep 14</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 50</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 30</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 5 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span class="label label-default" style="background-color: green;">SUB</span>
+                                <a href="http://kshow123.net/show/immortal-songs-season-2/episode-427.html" title="Immortal Songs Season 2"> Immortal Songs Season 2 Ep 427</a>
+                            </p>
+                        </td>
+                        <td><span class="fa fa-star" aria-hidden="true"></span> 21</td>
+                        <td><span class="fa fa-thumbs-o-up" aria-hidden="true"></span> 7</td>
+                        <td><span class="fa fa-download" aria-hidden="true"></span> 0</td>
+                        <td> 5 hrs ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Latest Section -->    
+        <div class="w3-container" style="padding:128px 16px; background-color:rgb(255, 255, 219);" id="latest">
+            <h3 class="w3-center">NEW KOREAN TV SHOWS</h3>
+            <p class="w3-center w3-large">Showing new korean tv shows</p>
+            <hr>
+            <div style="float: right">
+                <a href="#categories">
+                    <small class="pull-right">SEE MORE 
+                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    </small>
+                </a>
+            </div>
+            <div class="w3-row-padding w3-center" style="margin-top:64px">
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-202.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 202 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/knowing-brother/episode-202.html">Knowing Brother Episode 202</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  3 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/law-of-the-jungle/episode-387.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/law-of-the-jungle.jpg" alt="Law Of The Jungle Episode 387 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/law-of-the-jungle/episode-387.html">Law Of The Jungle Episode 387</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  5 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/baek-jong-wons-alley-restaurants/episode-206.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/baek-jong-wons-alley-restaurants.jpg" alt="Baek Jong Wons Alley Restaurants Episode 206 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/baek-jong-wons-alley-restaurants/episode-206.html">Baek Jong Wons Alley Restaurants Episode 206</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/senior-talk-show-golden-pond/episode-239.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/senior-talk-show-golden-pond.jpg" alt="Senior Talk Show Golden Pond Episode 239 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/senior-talk-show-golden-pond/episode-239.html">Senior Talk Show Golden Pond Episode 239</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/happy-together/episode-616.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/happy-together.jpg" alt="Happy Together S3 Episode 616 Cover">
+                    </a>
+                    <p class="w3-large">
+                            <a href="http://kshow123.net/show/happy-together/episode-616.html">Happy Together S3 Episode 616</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/lets-play-soccer/episode-18.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/lets-play-soccer.jpg" alt="Lets Play Soccer Episode 18 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/lets-play-soccer/episode-18.html">Lets Play Soccer Episode 18</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/the-boss-has-donkey-ears/episode-26.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/the-boss-has-donkey-ears.jpg" alt="The Boss Has Donkey Ears Episode 26 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/the-boss-has-donkey-ears/episode-26.html">The Boss Has Donkey Ears Episode 26</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+                <div class="w3-quarter">
+                    <a class="thumbnail" href="http://kshow123.net/show/joo-x-mals-movie/episode-1.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/joo-x-mals-movie.jpg" alt="Joo x Mals Movie Episode 1 Cover">
+                    </a>
+                    <p class="w3-large">
+                        <a href="http://kshow123.net/show/joo-x-mals-movie/episode-1.html">Joo x Mals Movie Episode 1</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>  11 hrs ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Popular Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color:rgb(255, 253, 206);" id="popular">
+            <h3 class="w3-center">POPULAR KOREAN TV SHOWS</h3>
+            <p class="w3-center w3-large">Showing popular korean tv shows</p>
+            <hr>
+            <div style="float: right">
+                <a href="#categories">
+                    <small class="pull-right">SEE MORE 
+                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    </small>
+                </a>
+            </div>
+            <div class="w3-row-padding" style="margin-top:64px">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/running-man/episode-473.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/running-man.jpg" alt="Running Man Episode 473 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/running-man/episode-473.html">Running Man Episode 473</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  5k likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/idol-room/episode-72.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/idol-room.jpg" alt="Idol Room Episode 72 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/idol-room/episode-72.html">Idol Room Episode 72</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  1.4k likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/running-man/episode-472.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/running-man.jpg" alt="Running Man Episode 472 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/running-man/episode-472.html">Running Man Episode 472</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  881 likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-201.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 201 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-201.html">Knowing Brother Episode 201</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  691 likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-200.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 200 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-200.html">Knowing Brother Episode 200</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  689 likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/queendom/episode-9.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/queendom.jpg" alt="Queendom Episode 9 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/queendom/episode-9.html">Queendom Episode 9</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  661 likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/the-return-of-superman/episode-308.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/the-return-of-superman.jpg" alt="The Return Of Superman Episode 308 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/the-return-of-superman/episode-308.html">The Return Of Superman Episode 308</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  551 likes
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <a class="thumbnail" href="http://kshow123.net/show/queendom/episode-8.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/queendom.jpg" alt="Queendom Episode 8 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/queendom/episode-8.html">Queendom Episode 8</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>  546 likes
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rated Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color:rgb(255, 255, 219);" id="rated">
+            <h3 class="w3-center">TOP RATED KOREAN TV SHOWS</h3>
+            <p class="w3-center w3-large">Showing top rated korean tv shows</p>
+            <hr>
+            <div style="float: right">
+                <a href="#categories">
+                    <small class="pull-right">SEE MORE 
+                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    </small>
+                </a>
+            </div>
+            <div class="w3-row-padding" style="margin-top:64px">
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-94.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 94 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-94.html">Knowing Brother Episode 94</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 12.7k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-85.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 85 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-85.html">Knowing Brother Episode 85</a>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 11.9k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-100.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 100 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-100.html">Knowing Brother Episode 100</a>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 8.1k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-88.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 88 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-88.html">Knowing Brother Episode 88</a>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 5.2k point
+                    </p>
+                </div>
+            </div>
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/wanna-one-go/episode-1.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/wanna-one-go.jpg" alt="Wanna One Go Episode 1 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/wanna-one-go/episode-1.html">Wanna One Go Episode 1</a>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 5.2k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/produce-101-season-2/episode-1.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/produce-101-season-2.jpg" alt="Produce 101 Season 2 Episode 1 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/produce-101-season-2/episode-1.html">Produce 101 Season 2 Episode 1</a>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 4.6k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/knowing-brother/episode-118.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/knowing-brother.jpg" alt="Knowing Brother Episode 118 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/knowing-brother/episode-118.html">Knowing Brother Episode 118</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 4.6k point
+                    </p>
+                </div>
+                <div class="w3-col l3 m6">
+                    <a class="thumbnail" href="http://kshow123.net/show/produce-101-season-2/episode-11.html">
+                        <img class="img-responsive" src="http://icdn.kshow123.net/thumb/produce-101-season-2.jpg" alt="Produce 101 Season 2 Episode 11 Cover">
+                    </a>
+                    <p>
+                        <a href="http://kshow123.net/show/produce-101-season-2/episode-11.html">Produce 101 Season 2 Episode 11</a>
+                    </p>
+                    <p class="small text-muted views">
+                        <span class="fa fa-star" aria-hidden="true"></span> 4.4k point
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+
+
+
+        <!-- Categories Section -->
+        <div class="w3-container" style="padding:128px 16px; background-color: rgb(255, 253, 206);" id="categories">
+            <h3 class="w3-center"><a href="#categories" class="w3-bar-item w3-button w3-wide fa fa-film"></a>CATEGORIES</h3>
+            <p class="w3-center w3-large">Showing categories tv shows</p>
+            <hr>
+
+            <div class = "box">
+                    <li  style = "color:rgb(36, 79, 36)"> Adventures
+                        <br><br>
+                        <ul><a href = "#">Law of the jungle</ul></a>
+                        <ul><a href = "#">Royal Adventures</ul></a>
+                    </li>
+                    <br>
+                    <li  style = "color:rgb(36, 79, 36)"> Comedy
+                            <br><br>
+                            <ul><a href = "film.html">Running Man</ul></a>
+                            <ul><a href = "film1.html">Knowing Brother</ul></a>
+                    </li>
+                    <br>
+                    <li  style = "color:rgb(36, 79, 36); margin-top:-23%; margin-left:50%"> Romance
+                            <br><br>
+                            <ul><a href = "#">We Got Married</ul></a>
+                            <ul><a href = "#">OnlyOneOf: Unlocking Love</ul></a>
+                    </li>
+                    <br>
+                    <li  style = "color:rgb(36, 79, 36); margin-top:-1%; margin-left:50%"> Survival
+                            <br><br>
+                            <ul><a href = "#">Produce 101</ul></a>
+                            <ul><a href = "#">Produce 48</ul></a>
+                    </li>
+                </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="w3-display-container" style="padding:128px 16px; background-color:rgb(255, 255, 219);" id="contact">
+            <h3 class="w3-center">CONTACT</h3>
+            <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+            <div style="text-align: center;">
+                <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Seoul, South Korea</p>
+                <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+                <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+                <br>
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" style="text-align: center; padding: 5px;"></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email" style="text-align: center; padding: 5px;"></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" style="text-align: center; padding: 5px;"></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message" style="text-align: center; padding: 32px;"></p>
+                    <p>
+                        <button class="w3-button w3-black" type="submit">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <br><br>
+            <div class="w3-center">
+                <button class="accordion w3-center">FREQUENTLY ASKED QUESTIONS</button>
+                <div class="panel">
+                    <h4>Question: How can I watch without ads?</h4>
+                    <p>Answer: Please follow our social media, to find out more developments.</p>
+                    <hr>
+                    <h4>Question: How to download movies?</h4>
+                    <p>Answer: At the moment the download feature is not yet available.</p>
+                </div>
+                <button class="accordion w3-center">DESCLAIMER</button>
+                <div class="panel">
+                    <p>This website is owned by KSHOW123 and a website as a service to the public. This company is not responsible for and expressly disclamis all liabillity for damages of any kind arising out of use, reference to, or reliance of any information contained within this website.</p>
+                </div>
+                <button class="accordion w3-center">PRIVACY POLICY</button>
+                <div class="panel">
+                    <p>This policy ("Privacy Statment") is intended to inform you of our polices and practices regarding the collection, use, and disclosure of any personal information we obtain about you based on your use on our website, products, or any services. "Personal information" is an information about you that is personally identifiable to you such as your name, e-mail adress, and other non-public information that is associated with the foregoing.</p>
+                </div>
+            <div class="w3-xlarge w3-section">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>@JuanDenise <a href="#home" title="W3.CSS" target="_blank" class="w3-hover-text-green">smile</a></p>
+        </footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+</script>
+</body>
+</html>
